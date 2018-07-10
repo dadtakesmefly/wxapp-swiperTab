@@ -1,0 +1,44 @@
+<!--pages/school/school.wxml-->
+<view class="container">
+  <view class="nav">
+    <view wx:for="{{taga}}" class='tag-box' wx:key="id" wx:for-index="i">
+      <view class="taga-item {{currentTab==item.id?'bold':''}}" data-current="{{item.id}}" data-name='{{item.text}}' data-id="{{item.id}}" bindtap="select">{{item.text}}</view>
+      <!-- <view class="borderline {{currentItem==item.id?'active-tag':''}}"></view>    -->
+    </view>
+  </view>
+ 
+  <!-- 轮播滑动 -->
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight}}px" bindchange="bindChange" indicator-dots="{{indicatorDots}}">
+    <swiper-item>
+
+      <scroll-view scroll-y style="height:{{winHeight-50}}px">
+         <!-- 时间提醒和tab栏选项 开始 -->
+      1
+         <!-- 专业数据渲染 结束 -->
+
+      </scroll-view>
+
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height:{{winHeight-50}}px">
+        <!-- 时间提醒和tab栏选项 开始 -->
+        2
+        <!-- 学校数据渲染 结束 -->
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height:{{winHeight-50}}px">
+        <!-- 时间提醒和tab栏选项 开始 -->
+        3
+        <!-- 学校数据渲染 结束 -->
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height:{{winHeight-50}}px">
+        <!-- 时间提醒和tab栏选项 开始 -->
+        4
+        <!-- 学校数据渲染 结束 -->
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
